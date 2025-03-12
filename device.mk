@@ -16,7 +16,7 @@
 $(call inherit-product, device/xiaomi/sm8450-common/common.mk)
 
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/cupid/cupid-vendor.mk)
+$(call inherit-product, vendor/xiaomi/ingres/ingres-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -24,11 +24,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.product.mod_device=cupid_global
-
-# Display - config
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/display_id_4630946545580055170.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946545580055170.xml
+    ro.product.mod_device=ingres_global
 
 # Display - timers
 PRODUCT_ODM_PROPERTIES += \
@@ -58,7 +54,7 @@ PRODUCT_PACKAGES += \
     CupidWifiMainlineOverlay
 
 # NFC
-TARGET_NFC_SKU := cupid
+TARGET_NFC_SKU := ingres
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.nfc.camera.pause_polling=true
@@ -68,7 +64,7 @@ PRODUCT_PACKAGES += \
     vendor.aospa.powershare-service
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.cupid.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cupid.rc
+    $(LOCAL_PATH)/rootdir/etc/init.ingres.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ingres.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -92,5 +88,5 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Naming overrides
 PRODUCT_VENDOR_PROPERTIES += \
-   bluetooth.device.default_name=Xiaomi 12 \
-   vendor.usb.product_string=Xiaomi 12 \
+   bluetooth.device.default_name=POCO F4 GT \
+   vendor.usb.product_string=POCO F4 GT \

@@ -12,17 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/xiaomi/cupid
+DEVICE_PATH := device/xiaomi/ingres
 
 # Bootloader
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/configs/board/board-info.txt
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cupid
-TARGET_RECOVERY_DEVICE_MODULES := libinit_cupid
-
 # OTA
-TARGET_OTA_ASSERT_DEVICE := cupid|22011223G
+TARGET_OTA_ASSERT_DEVICE := ingres|21121210G
 
 # Partitions
 BOARD_SUPER_PARTITION_SIZE := 9126805504
